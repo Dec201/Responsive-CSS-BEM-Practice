@@ -1,0 +1,258 @@
+/* 
+Google Fonts
+
+Oswald - Bold 700
+Montserrat - Regular 400
+
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Oswald', sans-serif;
+
+*/
+
+/* Root Variables */
+/* Color */
+
+:root {
+  --color__darkgray--1: hsl(226, 16%, 21%);
+  --color__darkgray--2: hsl(226, 15%, 27%);
+  --color__lightgray--1: hsl(225, 7%, 47%);
+  --color__lightgray--2: hsl(225, 6%, 87%);
+
+  --color__white--1: hsl(0, 0%, 100%);
+  --color__beige--1: hsl(40, 20%, 56%);
+
+  --font__family--Oswald: "Oswald", sans-serif;
+  --font__family--Montserrat: "Montserrat", sans-serif;
+}
+
+/* Elements */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: var(--font__family--Montserrat);
+  margin: 0 auto;
+}
+
+/* Main classes */
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+/* Navigation */
+
+.navbar {
+  background-color: var(--color__darkgray--1);
+  align-items: center;
+}
+
+.navbar__space {
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+.navbar__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
+  text-transform: uppercase;
+  flex-wrap: wrap;
+  align-items: center;
+  font-family: var(--font__family--Oswald);
+}
+
+.navbar__link {
+  color: var(--color__white--1);
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+.navbar__btn {
+  all: unset;
+  background-color: var(--color__beige--1);
+  border-radius: 30%;
+  color: var(--color__white--1);
+  cursor: pointer;
+  margin: 0 1em;
+}
+
+.navbar__btn--main {
+  font-family: var(--font__family--Oswald);
+  margin: 0;
+  padding: 0.5em;
+}
+
+/* Section Main */
+
+.section__main {
+  background-color: var(--color__darkgray--2);
+  color: var(--color__white--1);
+  padding-bottom: 2em;
+}
+
+.main__title {
+  font-size: 2.5rem;
+  font-family: var(--font__family--Oswald);
+}
+
+.main__title--biege {
+  color: var(--color__beige--1);
+}
+
+/* Section Two */
+
+.section__two {
+  text-align: center;
+  background-color: var(--color__lightgray--2);
+}
+
+.sectiontwo__title {
+  color: var(--color__beige--1);
+  font-family: var(--font__family--Oswald);
+}
+
+/* Section Three */
+
+.sectionthree__title {
+  color: var(--color__beige--1);
+  font-size: 1.5rem;
+  font-family: var(--font__family--Oswald);
+}
+
+.sectionthree__article {
+  text-align: center;
+}
+
+.articlethree__sidebar {
+  margin: 1em 0;
+  background-color: var(--color__darkgray--1);
+  padding: 1em 0;
+  color: var(--color__white--1);
+}
+
+.articlethree__para {
+  font-family: var(--font__family--Montserrat);
+  font-size: 0.8rem;
+}
+
+/* Section Four */
+
+.section__four {
+  background-color: var(--color__darkgray--1);
+  color: var(--color__white--1);
+  text-align: center;
+}
+
+.sectionfour__title {
+  text-align: center;
+  font-family: var(--font__family--Oswald);
+  font-size: 1.75rem;
+}
+
+.sectionfour__subtitle {
+  font-family: var(--font__family--Oswald);
+  color: var(--color__beige--1);
+}
+
+.sectionfour__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sectionfour__item {
+  padding: 0.4em 0;
+}
+
+.sectionfour__link {
+  color: var(--color__white--1);
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Images */
+
+.sectionthree__img {
+  height: 350px;
+  max-height: 100%;
+  width: 100%;
+  align-items: center;
+}
+
+/* Media Queries */
+
+@media (min-width: 700px) {
+  .sectionthree__article {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .articlethree__sidebar {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0.5rem;
+  }
+}
+
+@media (min-width: 1000px) {
+  .rowmanager {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .main__title {
+    font-size: 5rem;
+    padding: 1em;
+  }
+
+  .main__sidesection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .navbar__btn--main {
+    text-align: center;
+  }
+
+  .section__two {
+    padding: 4em 0;
+  }
+
+  .sectiontwo__col {
+    padding: 0 1em;
+  }
+
+  .sectionthree__mainbar {
+    padding: 0 2em;
+  }
+
+  .sectionthree__article {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .articlethree__sidebar {
+    margin: 1em 6em;
+    padding: 1em;
+  }
+
+  .sectionfour__title {
+    font-size: 3rem;
+  }
+
+  .sectionfour__col {
+    width: 100%;
+  }
+}
